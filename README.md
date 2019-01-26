@@ -3,10 +3,15 @@ All the scripts below rely on a data frame "epiGenesDF", which corresponds to Su
 
 Scripts for the variation-tolerance analysis:
 1. EM_paper_variation_tolerance_objects.R
-This script depends on a data frame "exactab", which is downloaded from the exac browser.
+This script depends on a data frame "exactab", which is downloaded from the ExAC browser. The "isEM" column is defined based on the epiGenesDF data frame, and the "isTF" based on the list of transcription factors downloaded from Barrera et al., 2016.
 2. EM_paper_variation_tolerance_figures.R
 
-Scripts for co-expression analyses:
+Scripts for the local domain constraint analysis:
+1. EM_paper_domain_constraint_functions.R
+2. EM_paper_domain_constraint_binary.R
+3. EM_paper_domain_constraint_analysis_quantitative_version.R
+
+Scripts for the co-expression analysis:
 
 1. EM_paper_gtex_read.R
 This script reads the gtex raw gene-level quantifications from GTEx into R, and transforms them into log2(RPM+1).
@@ -22,6 +27,8 @@ The above 3 scripts form the core of the co-expression analysis, where the log2(
 This script estimates the co-expression network for each tissue by thresholding the corresponding correlation matrix.
 7. EM_paper_coexpression_subsampling.R
 This script examines the robustness of the co-expression analysis to sample outliers.
+
+
 
 
 
