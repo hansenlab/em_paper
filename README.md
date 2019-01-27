@@ -12,7 +12,7 @@ This script depends on a data frame "exactab", which is downloaded from the ExAC
 1. EM_paper_domain_constraint_functions.R. 
 2. EM_paper_domain_constraint_binary.R. 
 3. EM_paper_domain_constraint_analysis_quantitative_version.R.  
-4. EM_paper_domain_constraint_quantitative_version_figures.R
+4. EM_paper_domain_constraint_quantitative_version_figures.R.   
 The above 4 scripts depend on a bed file "EMdomainsvCCR_2.bed", which is provided as supplemental table 12 in our paper.
 5. EM_paper_map_protein_domain_to_genomic_coordinates.R
 This script was used to define the protein domain genomic coordinates of the EM genes used in the local mutational constraint analysis.
