@@ -14,8 +14,8 @@ This script depends on a data frame "exactab", which is downloaded from the ExAC
 3. EM_paper_domain_constraint_analysis_quantitative_version.R.  
 4. EM_paper_domain_constraint_quantitative_version_figures.R.   
 The above 4 scripts depend on a bed file "EMdomainsvCCR_2.bed", which is provided as supplemental table 12 in our paper.
-5. EM_paper_map_protein_domain_to_genomic_coordinates.R
-This script was used to define the protein domain genomic coordinates of the EM genes used in the local mutational constraint analysis.
+5. EM_paper_map_protein_domain_to_genomic_coordinates.R.   
+This script defines a function that was used to derive the protein domain genomic coordinates of the EM genes used in the local mutational constraint analysis.
 
 * Scripts for the co-expression analysis:
 
@@ -41,9 +41,13 @@ This script examines the robustness of the co-expression analysis to sample outl
 3. EM_paper_expression_levels_tissue_specificity_figures.R.  
 These scripts examine the tissue specificity and expression levels of EM genes, within the 28 tissues also used in the co-expression analysis. They use the log2(RPKM+1) expression data, where the RPKM expression matrix is downloaded from the GTEx portal. They also use the "GTEx_Data_V6_Annotations_SampleAttributesDS.txt" annotation file, which is also downloaded from the GTEx portal.
 
+*  
+
 * Scripts for the trans-acting factor binding analysis:   
-1. EM_paper_TF_chipseq_read.R
-2. EM_paper_k562_analysis_and_figures.R
+1. EM_paper_TF_chipseq_read.R.   
+This script depends on the "metadata.tsv" file downloaded from the ENCODE portal after selecting the experimental data of interest.
+2. EM_paper_k562_analysis_and_figures.R.  
+This script depends on the hg19 coordinates of EM genes, obtained using liftover from the genome browser.
 
 
 
