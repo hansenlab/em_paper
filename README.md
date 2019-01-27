@@ -33,6 +33,8 @@ The above 3 scripts form the core of the co-expression analysis, where the log2(
 This script estimates the co-expression network for each tissue by thresholding the corresponding correlation matrix.
 7. EM_paper_coexpression_subsampling.R.   
 This script examines the robustness of the co-expression analysis to sample outliers.
+8. EM_paper_coexpression_spatial_clustering.    
+This script examines the potential chromosomal clustering of highly co-expressed and co-expressed EM genes.
 
 
 * Scripts for the tissue specificity and expression level analyses:
