@@ -1,17 +1,17 @@
 # em_paper
 All the scripts below rely on a data frame "epiGenesDF", which corresponds to Supplemental Table 2 in the paper.
 
-Scripts for the variation-tolerance analysis:
+* Scripts for the variation-tolerance analysis:
 1. EM_paper_variation_tolerance_objects.R. 
 This script depends on a data frame "exactab", which is downloaded from the ExAC browser. The "isEM" column is defined based on the epiGenesDF data frame, and the "isTF" based on the list of transcription factors downloaded from Barrera et al., 2016.
 2. EM_paper_variation_tolerance_figures.R. 
 
-Scripts for the local domain constraint analysis:
+* Scripts for the local domain constraint analysis:
 1. EM_paper_domain_constraint_functions.R. 
 2. EM_paper_domain_constraint_binary.R. 
 3. EM_paper_domain_constraint_analysis_quantitative_version.R. 
 
-Scripts for the co-expression analysis:
+* Scripts for the co-expression analysis:
 
 1. EM_paper_gtex_read.R. 
 This script reads the gtex raw gene-level quantifications from GTEx into R, and transforms them into log2(RPM+1).
