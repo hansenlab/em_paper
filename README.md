@@ -41,13 +41,20 @@ This script examines the robustness of the co-expression analysis to sample outl
 3. EM_paper_expression_levels_tissue_specificity_figures.R.  
 These scripts examine the tissue specificity and expression levels of EM genes, within the 28 tissues also used in the co-expression analysis. They use the log2(RPKM+1) expression data, where the RPKM expression matrix is downloaded from the GTEx portal. They also use the "GTEx_Data_V6_Annotations_SampleAttributesDS.txt" annotation file, which is also downloaded from the GTEx portal.
 
-*  
+* Scripts for disease associations of EM genes:
+1. EM_paper_disease_associations.R.   
+2. EM_paper_disease_candidates.R.   
+
+* Scripts for LDSC:
+1. EM_paper_brain_regulatory_elements.R.   
+This script depends on the hg19 coordinates of EM genes, obtained using liftover from the ucsc genome browser. It also depends on the file "brain_shared_enhancers.csv", obtained from Vermunt et al., 2014.
+2. The scripts within the ldsc/scripts directory.
 
 * Scripts for the trans-acting factor binding analysis:   
 1. EM_paper_TF_chipseq_read.R.   
 This script depends on the "metadata.tsv" file downloaded from the ENCODE portal after selecting the experimental data of interest.
 2. EM_paper_k562_analysis_and_figures.R.  
-This script depends on the hg19 coordinates of EM genes, obtained using liftover from the genome browser.
+This script depends on the hg19 coordinates of EM genes, obtained using liftover from the ucsc genome browser.
 
 
 
