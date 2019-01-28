@@ -23,7 +23,7 @@ This script defines a function that was used to derive the protein domain genomi
 1. EM_paper_gtex_read.R.   
 This script reads the gtex raw gene-level quantifications from GTEx into R, and transforms them into log2(RPM+1).
 2. EM_paper_28_raw_expression_matrices.R.   
-This script obtains the expression matrices subsequently used in the co-expression analyses. It depends on the log2(RPM+1) expression data obtained using the script "EM_paper_gtex_read.R", but also on the log2(RPKM+1) expression data (for filtering on expression level), where the RPKM expression matrix is downloaded from the GTEx portal. The "GTEx_Data_V6_Annotations_SampleAttributesDS.txt" annotation file is also downloaded from the GTEx portal.
+This script obtains the expression matrices subsequently used in the co-expression analyses. It depends on the log2(RPM+1) expression data obtained using the script "EM_paper_gtex_read.R", but also on the log2(RPKM+1) expression data (for filtering on expression level), where the RPKM expression matrix is downloaded from the GTEx portal. The "GTEx_Data_V6_Annotations_SampleAttributesDS.txt" annotation file is also downloaded from the GTEx portal. It also depends on a data frame "gtex.cds.df" which contains the gene names and the ENSEMBL id's for the genes in the expression matrix.
 
 3. EM_paper_coexpression_functions.R. 
 4. EM_paper_main_coexpression_analysis.R. 
@@ -42,12 +42,12 @@ This script examines the potential chromosomal clustering of highly co-expressed
 1. EM_paper_tissue_specificity_analysis.R
 2. EM_paper_tissue_specificity_analysis_batch_correction.R
 3. EM_paper_expression_levels_tissue_specificity_figures.R.  
-These scripts examine the tissue specificity and expression levels of EM genes, within the 28 tissues also used in the co-expression analysis. They use the log2(RPKM+1) expression data, where the RPKM expression matrix is downloaded from the GTEx portal. They also use the "GTEx_Data_V6_Annotations_SampleAttributesDS.txt" annotation file, which is also downloaded from the GTEx portal.
+These scripts examine the tissue specificity and expression levels of EM genes, within the 28 tissues also used in the co-expression analysis. They use the log2(RPKM+1) expression data, where the RPKM expression matrix is downloaded from the GTEx portal. They also use the "GTEx_Data_V6_Annotations_SampleAttributesDS.txt" annotation file, which is also downloaded from the GTEx portal. Moreover, they depend on a data frame "gtex.cds.df" which contains the gene names for the genes in the expression matrix. Finally, they depend on a list of 1254 human transcription factor genes provided in Barrera et al., 2016.
 
 * Scripts for disease associations of EM genes:
 1. EM_paper_disease_associations.R.   
 2. EM_paper_disease_candidates.R.   
-This script uses a file named "em_adjmatrix.rda", which is obtained using the "EM_paper_main_coexpression_analysis.R" script. This is the script that creates Supplemental Table 6 of the paper.
+This is the script that creates Supplemental Table 6 of the paper (except for the OMIM 2019 associations which were manually added as a column). It uses a file named "em_adjmatrix.rda", which is obtained using the "EM_paper_main_coexpression_analysis.R" script. 
 
 * Scripts for LDSC:
 1. EM_paper_brain_regulatory_elements.R.   
