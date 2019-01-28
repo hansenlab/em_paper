@@ -14,7 +14,7 @@ This script relies heavily on the "vioplot" R package.
 2. EM_paper_domain_constraint_binary.R. 
 3. EM_paper_domain_constraint_analysis_quantitative_version.R.  
 4. EM_paper_domain_constraint_quantitative_version_figures.R.   
-The above 4 scripts depend on a bed file "EMdomainsvCCR_2.bed", which is provided as supplemental table 12 in the paper.
+The above 4 scripts depend on a bed file "EMdomainsvCCR_2.bed", which is provided as Supplemental Table 12 in the paper.
 5. EM_paper_map_protein_domain_to_genomic_coordinates.R.   
 This script defines a function that was used to derive the protein domain genomic coordinates of the EM genes used in the local mutational constraint analysis. It depends on a data frame "all_interpro", which is downloaded from the InterPro database.
 
@@ -47,7 +47,7 @@ These scripts examine the tissue specificity and expression levels of EM genes, 
 * Scripts for disease associations of EM genes:
 1. EM_paper_disease_associations.R.   
 2. EM_paper_disease_candidates.R.   
-This script uses a file named "em_adjmatrix.rda", which obtained using the "EM_paper_main_coexpression_analysis.R" script.
+This script uses a file named "em_adjmatrix.rda", which is obtained using the "EM_paper_main_coexpression_analysis.R" script. This is the script that creates Supplemental Table 6 of the paper.
 
 * Scripts for LDSC:
 1. EM_paper_brain_regulatory_elements.R.   
