@@ -15,7 +15,7 @@ gtex_tissues <- unique(tissue_mat)
 
 #define function that will be used in the following line
 whichExpressedAboveZero <- function(tissue_name, expr_mat_rpkm){
-  gtex.cds.mat <- expr_mat_rpkm #note that this gtex.cds.mat for the function's local environment, not for the global enrivonment
+  gtex.cds.mat <- expr_mat_rpkm #note that this gtex.cds.mat is for the function's local environment, not for the global enrivonment
   selected_tissue <- which(tissue_mat %in% c(tissue_name))
   gtex_selected_tissue <- gtex.cds.mat[, selected_tissue, drop=FALSE]
   median_expr_levels <- rowMedians(gtex_selected_tissue)
