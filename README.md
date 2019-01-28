@@ -4,7 +4,8 @@ All the scripts below rely on a data frame "epiGenesDF", which corresponds to Su
 * Scripts for the variation-tolerance analysis:
 1. EM_paper_variation_tolerance_objects.R.  
 This script depends on a data frame "exactab", which is downloaded from the ExAC browser. The "isEM" column is defined based on the epiGenesDF data frame, and the "isTF" based on the list of transcription factors downloaded from Barrera et al., 2016.
-2. EM_paper_variation_tolerance_figures.R. 
+2. EM_paper_variation_tolerance_figures.R.  
+This script relies heavily on the "vioplot" R package.
 3. EM_paper_accessory_EM_subunit_analysis_and_figures.R
 4. EM_paper_substrate_specificities_analysis_and_figures.R.  
 
@@ -15,7 +16,7 @@ This script depends on a data frame "exactab", which is downloaded from the ExAC
 4. EM_paper_domain_constraint_quantitative_version_figures.R.   
 The above 4 scripts depend on a bed file "EMdomainsvCCR_2.bed", which is provided as supplemental table 12 in the paper.
 5. EM_paper_map_protein_domain_to_genomic_coordinates.R.   
-This script defines a function that was used to derive the protein domain genomic coordinates of the EM genes used in the local mutational constraint analysis.
+This script defines a function that was used to derive the protein domain genomic coordinates of the EM genes used in the local mutational constraint analysis. It depends on a data frame "all_interpro", which is downloaded from the InterPro database.
 
 * Scripts for the co-expression analysis:
 
@@ -27,7 +28,7 @@ This script obtains the expression matrices subsequently used in the co-expressi
 3. EM_paper_coexpression_functions.R. 
 4. EM_paper_main_coexpression_analysis.R. 
 5. EM_paper_coexpression_neuro_enrichment.R.   
-The above 3 scripts form the core of the co-expression analysis, where the log2(RPM+1) expression matrices obtained via the script "EM_paper_28_raw_expression_matrices.R" are preprocessed, co-expression networks are estimated for each tissue, and subsequently the results are integrated across tissues. Finally, the enrichment of genes associated with neurological dysfunction in the highly co-expressed group is tested.
+The above 3 scripts form the core of the co-expression analysis, where the log2(RPM+1) expression matrices obtained via the script "EM_paper_28_raw_expression_matrices.R" are preprocessed, co-expression networks are estimated for each tissue, and subsequently the results are integrated across tissues. Finally, the enrichment of genes associated with neurological dysfunction in the highly co-expressed group is tested. 
 
 6. EM_paper_coexpression_cormat_thresholding.R.   
 This script estimates the co-expression network for each tissue by thresholding the corresponding correlation matrix.
@@ -46,6 +47,7 @@ These scripts examine the tissue specificity and expression levels of EM genes, 
 * Scripts for disease associations of EM genes:
 1. EM_paper_disease_associations.R.   
 2. EM_paper_disease_candidates.R.   
+This script uses a file named "em_adjmatrix.rda", which obtained using the "EM_paper_main_coexpression_analysis.R" script.
 
 * Scripts for LDSC:
 1. EM_paper_brain_regulatory_elements.R.   
