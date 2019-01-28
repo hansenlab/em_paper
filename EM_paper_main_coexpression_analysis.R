@@ -1,4 +1,5 @@
 load(file = "data/gtex_28_tissues_raw_expr_mat_list.rda")
+library(matrixStats)
 
 mean_centered_raw.expr_mat_list <- lapply(raw_expr.mat_list, function(xx) {
   exprmat <- xx
@@ -49,9 +50,6 @@ for (i in 1:length(distinct_gtex_tissues)){
   saveSoftPowerPlot(clean_expr_mat_list[[i]], distinct_gtex_tissues[[i]], filenames[[i]])
 }
 
-###after looking at the softpower plots
-#pcremoval_softpowers <- c(7, 6, 7, 8, 14, 8, 10, 6, 8, 7, 7, 8, 7, 6, 9, 8, 
-#                          8, 9, 9, 9, 9, 7, 8, 10, 8, 8, 5) those are wrong I had forgotten to center the data before PC removal
 clean_expr_mat_list_pcremoval <- list()
 for (i in 1:8){
   clean_expr_mat_list_pcremoval[[i]] <- clean_expr_mat_list[[i]]
@@ -63,6 +61,8 @@ for (i in 10:23){
 for (i in 24:28){
   clean_expr_mat_list_pcremoval[[i]] <- clean_expr_mat_list[[i]]
 }
+
+###after looking at the softpower plots
 pcremoval_softpowers <- c(6, 6, 9, 6, 7, 7, 5, 5, 6, 7, 9, 7, 4, 9, 7, 10, 7, 6, 9, 7, 8, 6, 6, 7, 7, 6, 6, 10) #note I have moved stomach after esophagus - mucosa in the ordering of the tissues and thus in the ordering of softpowers as well
 
 softpowers <- pcremoval_softpowers
@@ -108,7 +108,6 @@ class(module_membership_matrix) <- "numeric"
 
 ###now perform the module membership analysis across tissues
 library(stringdist)
-#load(file = "figures/coexpression/ruv_module_membership_matrix.rda")
 #in order to get accurate distances between genes, replace the number corresponding to the grey module (which represents
 #singletons) with a negative number specific to each row. Otherwise, the hamming distance considers the singletons
 #as being coexpressed in the same module
